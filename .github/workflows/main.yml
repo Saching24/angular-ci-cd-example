@@ -20,8 +20,12 @@ jobs:
       - name: Install and build
         run: npm install && npm run build --prod
       
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: dev-gh-pages # The branch the action should deploy to.
-          folder: dist/angular-ci-cd-example # The folder the action should deploy. 
+      - name: Build
+      run: npm run build:prod
+
+    - name: Deploy
+      if: success()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: dist/angular-ci-cd-example
+        enable_jekyll: true
