@@ -23,5 +23,5 @@ jobs:
       - name: Deploy
         run: npm run deploy
         with:
-        branch: gh-pages # The branch the action should deploy to.
-        folder: dist/angular-ci-cd-example # The folder the action should deploy. 
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist/angular-ci-cd-example # The folder the action should deploy. 
