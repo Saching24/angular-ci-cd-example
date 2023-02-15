@@ -21,9 +21,10 @@ jobs:
         run: npm install && npm run build --prod
       
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        on: workflow_dispatch
         permissions:
         contents: write
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist/angular-ci-cd-example # The folder the action should deploy.
