@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/angular-ci-cd-example/",
             "outputPath": "dist/angular-ci-cd-example",
             "index": "src/index.html",
             "main": "src/main.ts",
